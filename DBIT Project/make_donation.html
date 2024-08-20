@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Donation</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ffeb3b;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images\CompanyLogo.jpg.png" alt="Feed4All Logo" id="Logo">
+        </div>
+        <div>
+            <h1>Feed4All</h1>
+            <p><i>Feeding the nation, with every donation!</i></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="view_history.php"> History</li>
+                <li><a href="edit_donation.php">Update Account</a></li>
+                <li><a href="make_donation.html">Donations</a></li>
+                <li><a href="donors_dashboard.html"> Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+        <h1>Make a Donation</h1>
+        <form action="PHP/submit_donation.php" method="POST" class="donation-form">
+            <label for="donorName">Name:</label>
+            <input type="text" id="donorName" name="donorName" required>
+
+            <label for="donorEmail">Email:</label>
+            <input type="email" id="donorEmail" name="donorEmail" required>
+
+            <label for="donorPhone">Phone Number:</label>
+            <input type="text" id="donorPhone" name="donorPhone" required>
+
+            <label for="foodType">Food Type:</label>
+            <input type="text" id="foodType" name="foodType" required>
+
+            <label for="foodQuantity">Quantity:</label>
+            <input type="text" id="foodQuantity" name="foodQuantity" required>
+
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="date" id="expiry_date" name="expiry_date" required>
+
+            <input type="submit" value="Submit Donation">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Feed4All. All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
+
+
+
